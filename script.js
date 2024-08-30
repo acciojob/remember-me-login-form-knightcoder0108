@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const passwordInput = document.getElementById('password');
     const rememberMeCheckbox = document.getElementById('checkbox');
 
-    // Check if there are saved credentials
+    
     const savedUsername = localStorage.getItem('username');
     const savedPassword = localStorage.getItem('password');
 
@@ -13,9 +13,9 @@ document.addEventListener('DOMContentLoaded', function () {
         existingButton.style.display = 'inline-block';
     }
 
-    // Handle form submission
+    
     loginForm.addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevent default form submission behavior
+        event.preventDefault(); 
 
         const username = usernameInput.value;
         const password = passwordInput.value;
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
         alert(`Logged in as ${username}`);
     });
 
-    // Handle existing user login
+   
     existingButton.addEventListener('click', function () {
         alert(`Logged in as ${savedUsername}`);
     });
