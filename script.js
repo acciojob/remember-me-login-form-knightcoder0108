@@ -22,8 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
             localStorage.setItem('username', username);
             localStorage.setItem('password', password);
         } else {
-            localStorage.removeItem('username');
-            localStorage.removeItem('password');
+            localStorage.clear();
         }
 
         alert(`Logged in as ${username}`);
