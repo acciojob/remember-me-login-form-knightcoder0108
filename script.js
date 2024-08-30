@@ -5,10 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const passwordInput = document.getElementById('password');
     const rememberMeCheckbox = document.getElementById('checkbox');
 
-    const savedUsername = localStorage.getItem('username');
-    const savedPassword = localStorage.getItem('password');
-
-    if (savedUsername && savedPassword) {
+    if (localStorage.getItem('username') && localStorage.getItem('password')) {
         existingButton.style.display = 'inline-block';
     }
 
@@ -22,7 +19,8 @@ document.addEventListener('DOMContentLoaded', function () {
             localStorage.setItem('username', username);
             localStorage.setItem('password', password);
         } else {
-            localStorage.clear();
+            localStorage.removeItem('username');
+            localStorage.removeItem('password');
         }
 
         alert(`Logged in as ${username}`);
